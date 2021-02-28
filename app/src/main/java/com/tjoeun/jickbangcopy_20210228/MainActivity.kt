@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mRoomList.add()
+        mRoomList.add(Room(5000))
         mRoomList.add(Room(8000, "서울시 종로구", 4, "종로의 4층 방."))
         mRoomList.add(Room(25600, "경기도 고양시", -1, "고양시의 지하1층 방."))
         mRoomList.add(Room(17000, "서울시 동작구", 0, "종로의 4층 방."))
