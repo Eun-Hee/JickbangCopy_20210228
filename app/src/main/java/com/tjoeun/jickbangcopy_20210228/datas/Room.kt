@@ -11,6 +11,8 @@ class Room(
     val floor: Int,
     val description: String) : Serializable {
 
+    constructor(price: Int) : this(price, address: "주소 미정", floor: 1, description: "가격만 넣은방")
+
 //    가격 값에 따라 => 억단위 표시 여부 가공 기능 => 함수로
 
     fun getFormattedPrice() : String {

@@ -18,10 +18,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        mRoomList.add()
         mRoomList.add(Room(8000, "서울시 종로구", 4, "종로의 4층 방."))
         mRoomList.add(Room(25600, "경기도 고양시", -1, "고양시의 지하1층 방."))
         mRoomList.add(Room(17000, "서울시 동작구", 0, "종로의 4층 방."))
-        mRoomList.add(Room(4000, "충청시 천안시", 5, "종로의 4층 방."))
+        mRoomList.add(Room(4000, "충청북도 천안시", 5, "종로의 4층 방."))
         mRoomList.add(Room(5000, "서울시 은평구", 8, "종로의 4층 방."))
         mRoomList.add(Room(35000, "서울시 동대문구", -2, "종로의 4층 방."))
         mRoomList.add(Room(8000, "서울시 강북구", 3, "종로의 4층 방."))
