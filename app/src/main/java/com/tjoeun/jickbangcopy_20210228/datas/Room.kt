@@ -1,6 +1,7 @@
 package com.tjoeun.jickbangcopy_20210228.datas
 
 import android.icu.number.NumberRangeFormatterSettings
+import java.io.Serializable
 import java.text.NumberFormat
 import java.util.*
 
@@ -8,13 +9,13 @@ class Room(
     val price: Int,
     val address: String,
     val floor: Int,
-    val description: String) {
+    val description: String) : Serializable {
 
 //    가격 값에 따라 => 억단위 표시 여부 가공 기능 => 함수로
 
     fun getFormattedPrice() : String {
 
-    if (this.price < 100000) {
+    if (this.price < 10000) {
 //        8,500 등 컴마처리
 
         return NumberFormat.getNumberInstance(Locale.US).format(this.price)
@@ -28,7 +29,8 @@ class Room(
 //        억 밑은 얼마인지:\?
         val rest = this.price%10000
 //        rest => 컴마 처리
-        val commaRest = NumberFormat.getNumberInstance(Locale.US).format(this.price)
+        val commaRest= NumberFormat.getNumberInstance(Locale.US).format(rest)
+        return "${uk}억 ${commaRest}"
 
     }
     }

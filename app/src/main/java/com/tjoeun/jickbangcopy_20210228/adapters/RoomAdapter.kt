@@ -48,7 +48,7 @@ class RoomAdapter(
 //        가격 표시 : price가 1만 이상, 아니냐에 따라 다르게 가공
 //        1만 미만 : 8500등 컴마만. 1만 이상 : 5억 4,500 등으로 억단위를 별도 표기
 //        해당 기능도 Room의 기능으로 추가해두고 => 가져다쓰자.
-        priceTxt.text =
+        priceTxt.text = data.getFormattedPrice()
         return row
     }
 
